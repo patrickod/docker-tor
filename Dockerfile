@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Patrick O'Doherty <p@trickod.com>
 
-EXPOSE 9091
+EXPOSE 9001
 ENV VERSION 0.2.4.20
 
 RUN apt-get install -y curl build-essential libevent-dev libssl-dev
@@ -14,6 +14,7 @@ RUN cd /tmp/tor-${VERSION} && make install
 ADD ./torrc /etc/torrc
 # Allow you to upgrade your relay without having to regenerate keys
 VOLUME /.tor
+
 
 # Generate a random nickname for the relay
 RUN echo "Nickname docker$(head -c 16 /dev/urandom  | sha1sum | cut -c1-10)" >> /etc/torrc
