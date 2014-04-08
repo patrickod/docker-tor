@@ -2,8 +2,9 @@ FROM ubuntu
 MAINTAINER Patrick O'Doherty <p@trickod.com>
 
 EXPOSE 9001
-ENV VERSION 0.2.4.20
+ENV VERSION 0.2.4.21
 
+RUN apt-get update
 RUN apt-get install -y curl build-essential libevent-dev libssl-dev
 RUN curl https://www.torproject.org/dist/tor-${VERSION}.tar.gz | tar xz -C /tmp
 
