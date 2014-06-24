@@ -2,7 +2,7 @@ FROM ubuntu
 MAINTAINER Patrick O'Doherty <p@trickod.com>
 
 EXPOSE 9001
-ENV VERSION 0.2.4.21
+ENV VERSION 0.2.4.22
 
 RUN apt-get update
 RUN apt-get install -y curl build-essential libevent-dev libssl-dev
