@@ -6,7 +6,7 @@ ENV VERSION 0.2.4.23
 
 RUN apt-get update
 RUN apt-get install -y curl build-essential libevent-dev libssl-dev
-RUN curl https://www.torproject.org/dist/tor-${VERSION}.tar.gz | tar xz -C /tmp
+RUN curl https://dist.torproject.org/tor-${VERSION}.tar.gz | tar xz -C /tmp
 
 RUN cd /tmp/tor-${VERSION} && ./configure
 RUN cd /tmp/tor-${VERSION} && make
