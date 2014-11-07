@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Patrick O'Doherty <p@trickod.com>
+MAINTAINER "Patrick O'Doherty <p@trickod.com>"
 
 EXPOSE 9001
 ENV VERSION 0.2.4.23
