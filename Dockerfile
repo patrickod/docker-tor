@@ -2,7 +2,7 @@ FROM ubuntu
 MAINTAINER "Patrick O'Doherty <p@trickod.com>"
 
 EXPOSE 9001
-ENV VERSION 0.2.4.23
+ENV VERSION 0.2.5.10
 
 RUN apt-get update && apt-get install -y \
    build-essential \
