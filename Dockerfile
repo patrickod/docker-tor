@@ -4,8 +4,12 @@ MAINTAINER "Patrick O'Doherty <p@trickod.com>"
 EXPOSE 9001
 ENV VERSION 0.2.4.23
 
-RUN apt-get update
-RUN apt-get install -y curl build-essential libevent-dev libssl-dev
+RUN apt-get update && apt-get install -y \
+   build-essential \
+   curl \
+   libevent-dev \
+   libssl-dev
+
 RUN curl https://dist.torproject.org/tor-${VERSION}.tar.gz | tar xz -C /tmp
 
 RUN cd /tmp/tor-${VERSION} && ./configure
