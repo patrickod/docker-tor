@@ -23,7 +23,9 @@ WORKDIR /var/lib/tor
 
 ADD ./torrc /etc/torrc
 # Allow you to upgrade your relay without having to regenerate keys
-VOLUME /var/lib/tor
+# VOLUME /var/lib/tor
+
+VOLUME /.tor
 
 # Generate a random nickname for the relay
 RUN echo "Nickname docker$(head -c 16 /dev/urandom  | sha1sum | cut -c1-10)" >> /etc/torrc
