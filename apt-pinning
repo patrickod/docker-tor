@@ -1,0 +1,3 @@
+Package: *
+Pin: origin "deb.torproject.org"
+Pin-Priority: 800

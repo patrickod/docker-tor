@@ -1,4 +1,7 @@
 Log notice stdout
 ExitPolicy reject *:*
+# User debian-tor
+# DataDirectory /var/lib/tor
+DataDirectory /root/.tor
 ORPort 9001
-
+#
